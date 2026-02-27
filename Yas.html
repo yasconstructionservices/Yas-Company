@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yas Construction Services</title>
+
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dfe2d5;
+}
+
+/* Header */
+header {
+  background-color: #726e6e;
+  color: #000;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color:rgb(24, 45, 43);
+  text-align: center;
+  padding: 10px;
+}
+
+nav a {
+  color: rgb(255, 255, 255);
+  margin: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Hero video */
+.hero {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(200, 194, 194);
+  text-align: center;
+}
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.hero-content {
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Content */
+.content {
+  padding: 40px;
+}
+
+/* Search */
+.search-bar {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Products grid */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual product */
+.product {
+  width: 200px;
+  background: #0ea6b0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.product img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  background: white;
+  border-radius: 5px;
+}
+
+.product h3 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Form */
+form {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+form button {
+  background-color: blue;
+  color: white;
+  padding: 12px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+/* Footer */
+footer {
+  background: #30acea;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+</style>
+
+<script>
+function searchProducts() {
+  const input = document.getElementById("productSearch").value.toLowerCase();
+  const products = document.getElementsByClassName("product");
+
+  for (let i = 0; i < products.length; i++) {
+    const title = products[i].innerText.toLowerCase();
+    products[i].style.display = title.includes(input) ? "block" : "none";
+  }
+}
+</script>
+
+</head>
+<body>
+
+<header>
+<h1>Yas Construction Services PTY LTD</h1>
+<p>Your Trusted Construction Materials Supplier</p>
+</header>
+
+<nav>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section class="hero">
+<video autoplay muted loop class="hero-video">
+<source src="videos/construction.mp4" type="video/mp4">
+</video>
+
+<div class="hero-content">
+<h2>High Quality Construction Products</h2>
+<p>Durable, Reliable, Affordable</p>
+</div>
+</section>
+
+<div class="search-bar">
+<input type="text" id="productSearch" placeholder="Search product..." onkeyup="searchProducts()">
+</div>
+
+<section class="content" id="products">
+<h2>Our Products</h2>
+
+<div class="products">
+
+<div class="product">
+<img src="images/Fiber-Glass-Mesh.jpg">
+<h3>Fiber Glass Mesh</h3>
+</div>
+
+<div class="product">
+<img src="images/Bule-Maskin-Tapes.jpg">
+<h3>Blue Masking Tape</h3>
+</div>
+
+<div class="product">
+<img src="images/Aluminium Corner beads.jpg">
+<h3>Aluminium Corner Beads</h3>
+</div>
+
+<div class="product">
+<img src="images/B-Bule-Tapes.jpg">
+<h3>B Blue Tape</h3>
+</div>
+
+<div class="product">
+<img src="images/B-Saw.jpg">
+<h3>Big Saw</h3>
+</div>
+
+<div class="product">
+<img src="images/chalk-line.jpg">
+<h3>Chalk Line</h3>
+</div>
+
+<div class="product">
+<img src="images/Flot.jpg">
+<h3>Float</h3>
+</div>
+
+<div class="product">
+<img src="images/Foam-Gun.jpg">
+<h3>Foam Gun</h3>
+</div>
+
+<div class="product">
+<img src="images/Foam-scracher.jpg">
+<h3>Foam Scraper</h3>
+</div>
+
+<div class="product">
+<img src="images/Foil-Gray-Tapes.jpg">
+<h3>Foil Gray Tape</h3>
+</div>
+
+<div class="product">
+<img src="images/G-Gray-Tapes.jpg">
+<h3>Gray Tape</h3>
+</div>
+
+<div class="product">
+<img src="images/Gloves.jpg">
+<h3>Gloves</h3>
+</div>
+
+<div class="product">
+<img src="images/Trowel.jpg">
+<h3>Trowel</h3>
+</div>
+
+<div class="product">
+<img src="images/Tile-Spacer.jpg">
+<h3>Tile Spacer</h3>
+</div>
+
+<div class="product">
+<img src="images/Sponge.jpg">
+<h3>Sponge</h3>
+</div>
+
+</div>
+</section>
+
+<section class="content" id="about">
+<h2>About Us</h2>
+
+<p>
+Yas Construction sevices supplies high-quality construction tools and materials across Melbourne.
+We have may tools that maybe you can find here but you can email or give us a call and ask we are here to assist you! 
+
+<br><br>
+Phone: 0411957956<br>
+Phone: 0498628433<br>
+Email: yasconstructionservices@gmail.com<br>
+Address: 8 Zinc Cct, Cranbourne North VIC 3977
+</p>
+
+</section>
+
+<section class="content" id="contact">
+
+<h2>Contact / Order</h2>
+
+<form action="https://formsubmit.co/yasconstructionservices@gmail.com" method="POST">
+
+<input type="hidden" name="_subject" value="New Order from Website">
+<input type="hidden" name="_captcha" value="false">
+
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="tel" name="phone" placeholder="Phone Number" required>
+<input type="email" name="email" placeholder="Email" required>
+<textarea name="address" placeholder="Address" required></textarea>
+<textarea name="message" placeholder="Your Message" required></textarea>
+
+<button type="submit">Submit Order</button>
+
+</form>
+
+</section>
+
+<footer>
+<p>
+&copy; 2026 Yas Construction Services. Phone: 0411957956 0498628433 Email: yasconstructionservices@gmail.com <br>ALL Melobourne (Victora) All rights reserved
+</p>
+</footer>
+
+</body>
+</html>
